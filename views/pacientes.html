@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de pacientes</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/alta-paciente">Dar de alta</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/lista-pacientes">Lista de pacientes</a>
+            </li>
+            <li class="nav-item float-right">
+                <a class="nav-link" href="https://soluciones.maps.arcgis.com/apps/opsdashboard/index.html#/4dc8574e4f014630930606bdb7b202dd" target="_blank">Dashboard</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="container" style="padding-top: 1.5%;">
+        <div class="py-5 text-center">
+
+            <h2>Lista pacientes COVID-19</h2>
+            
+        </div>
+        <table class="table">
+            <thead class=".thead-light">
+                <tr>
+                    <th class="center-align mypadding">Nombre</th>
+                    <th class="center-align mypadding">Edad</th>
+                    <th class="center-align mypadding">Género</th>
+                    <th class="center-align mypadding">Seguridad Social</th>
+                    <th class="center-align mypadding">Dolor de garganta</th>
+                    <th class="center-align mypadding">Tos seca</th>
+                    <th class="center-align mypadding">Fiebre</th>
+                    <th class="center-align mypadding">Dificultad para respirar</th>
+                    <th class="center-align mypadding">Diabetes</th>
+                    <th class="center-align mypadding">Hipertensión</th>
+                    <th class="center-align mypadding">Sobrepeso</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <%pacientes.forEach((paciente)=>{%>
+                <tr>
+                    <td class="center-align mypadding"><%=paciente.nombre%></td>
+                    <td class="center-align mypadding"><%=paciente.edad%></td>
+                    <td class="center-align mypadding"><%=paciente.genero%></td>
+                    <td class="center-align mypadding"><%=paciente.seguridad_social%></td>
+                    <td class="center-align mypadding"><%=paciente.dolor_garganta%></td>
+                    <td class="center-align mypadding"><%=paciente.tos_seca%></td>
+                    <td class="center-align mypadding"><%=paciente.fiebre%></td>
+                    <td class="center-align mypadding"><%=paciente.dif_respirar%></td>
+                    <td class="center-align mypadding"><%=paciente.diabetes%></td>
+                    <td class="center-align mypadding"><%=paciente.hipertension%></td>
+                    <td class="center-align mypadding"><%=paciente.sobrepeso%></td>
+                </tr>
+                <%});%>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
