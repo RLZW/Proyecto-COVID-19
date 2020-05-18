@@ -1,7 +1,7 @@
 # Proyecto-COVID-19-MVC-SQL-Express
 Proyecto desarrollado para la clase de desarrollo web con una base de datos montada en MySQL, backend con Express.js con una arquitectura MVC.
 
-[Test it](https://covid-corona-19.herokuapp.com/) Base de datos no funcionando de momento.
+[Test it](https://covid-corona-19.herokuapp.com/) (Base de datos no funcionando de momento.)
 
 ### Correr el proyecto
 `npm init`
